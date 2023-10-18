@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void isOddNumber(int a)
+int isOddNumber(int a)
 {
 	if (a % 2 != 0)
 	{
-		printf("1");
+		return 1;
 	}
 	else
 	{
-		printf("0");
+		return 0;
 	}
 }
 
@@ -24,7 +24,16 @@ int main()
 	}
 	else
 	{
-		isOddNumber(Num);
+		int result = isOddNumber(Num);
+
+		if (result == 1)
+		{
+			printf("Odd");
+		}
+		else
+		{
+			printf("Even");
+		}
 		return 0;
 	}
 }
